@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HTML5_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spin_Hexagon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -113,7 +113,9 @@
                             <constraint firstItem="YK3-VB-uJe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ZPi-HQ-L6z"/>
                             <constraint firstItem="gOW-t8-Ysf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fGP-rt-UPe"/>
                             <constraint firstItem="lZu-hx-07T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="kDq-Me-qyh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lZu-hx-07T" secondAttribute="trailing" id="khu-IO-5gg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lZu-hx-07T" secondAttribute="trailing" id="khu-IO-5gg">
+                                <variation key="widthClass=compact" constant="-10"/>
+                            </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YK3-VB-uJe" secondAttribute="bottom" constant="50" id="yoT-TF-ezX"/>
                         </constraints>
                     </view>

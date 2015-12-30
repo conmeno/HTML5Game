@@ -23,6 +23,7 @@
 		9608717E1C32495F00A93494 /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9608717D1C32495F00A93494 /* cclass.m */; };
 		960871821C32785200A93494 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960871811C32785200A93494 /* GoogleMobileAds.framework */; };
 		960871AD1C3284D600A93494 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 960871AC1C3284D600A93494 /* html */; };
+		961FCD1D1C33CDF300A22965 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FCD1C1C33CDF300A22965 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		9608717D1C32495F00A93494 /* cclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cclass.m; sourceTree = "<group>"; };
 		960871811C32785200A93494 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		960871AC1C3284D600A93494 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		961FCD1C1C33CDF300A22965 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		9608713C1C32467F00A93494 /* HTML5 Game */ = {
 			isa = PBXGroup;
 			children = (
+				961FCD1C1C33CDF300A22965 /* Data.swift */,
 				960871AC1C3284D600A93494 /* html */,
 				9608717C1C32495F00A93494 /* cclass.h */,
 				9608717D1C32495F00A93494 /* cclass.m */,
@@ -299,6 +302,7 @@
 				960871401C32467F00A93494 /* ViewController.swift in Sources */,
 				9608717E1C32495F00A93494 /* cclass.m in Sources */,
 				9608713E1C32467F00A93494 /* AppDelegate.swift in Sources */,
+				961FCD1D1C33CDF300A22965 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

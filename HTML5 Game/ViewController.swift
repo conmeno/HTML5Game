@@ -14,7 +14,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
 
     
     
-    
+    let data = Data()
     @IBOutlet weak var topView: UIView!
     
    // var timerAd:NSTimer?
@@ -55,23 +55,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let path = NSBundle.mainBundle().pathForResource("index", ofType: "html") {
-//            // use path
-//            let text2 = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-//            //println(text2)
-//            // textv1.text=text2
-//            //            let mainB =  NSBundle.mainBundle()
-//            //            let requestURL1 = mainB.bundleURL
-//            
-//            print(NSBundle.mainBundle().bundleURL)
-//            webView.loadHTMLString(text2!, baseURL:  NSBundle.mainBundle().bundleURL)
-//            
-//            
-//        }
-
-        
-        
-        
         
         CheckAdOptionValue()
         if(showAd())
@@ -84,14 +67,15 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
             }
             isStopAD = false
         }
-        AdOption.hidden = true
-        topView.hidden = true
-
-        
         self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
         
         self.timerAdmobFull = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAdmobFull:", userInfo: nil, repeats: true)
-        // Do any additional setup after loading the view, typically from a nib.
+       
+        
+        
+        
+        AdOption.hidden = true
+        topView.hidden = true
         LoadWebView()
        
     }
@@ -127,11 +111,11 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
     
     func createAndLoadAd() -> GADInterstitial
     {
-        let ad = GADInterstitial(adUnitID: "ca-app-pub-2184084082579225/1685330392")
+        let ad = GADInterstitial(adUnitID: data.gFull)
         //ad.delegate = self
         let request = GADRequest()
         
-        request.testDevices = [kGADSimulatorID, "cbbc08233d704efce885c2e49713a536"]
+        request.testDevices = [kGADSimulatorID, data.TestDeviceID]
         
         ad.loadRequest(request)
         
@@ -150,14 +134,14 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
         let w = view?.bounds.width
         let h = view?.bounds.height
         gBannerView = GADBannerView(frame: CGRectMake(0, (h! - 50) , w!, 50))
-        gBannerView?.adUnitID = "ca-app-pub-2184084082579225/9208597191"
+        gBannerView?.adUnitID = data.gBanner
         gBannerView?.delegate = self
         gBannerView?.rootViewController = self
         self.view.addSubview(gBannerView)
         //self.view.addSubview(bannerView!)
         //adViewHeight = bannerView!.frame.size.height
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID , "cbbc08233d704efce885c2e49713a536"];
+        request.testDevices = [kGADSimulatorID , data.TestDeviceID];
         gBannerView?.loadRequest(request)
         gBannerView?.hidden = true
         
@@ -248,9 +232,9 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
     
     //Form Event
     @IBAction func moreGameClick(sender: AnyObject) {
-        let barsLink : String = "itms-apps://itunes.apple.com/developer/phuong-thanh-nguyen/id1019089261"
-        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
-        
+//        let barsLink : String = "itms-apps://itunes.apple.com/ca/developer/phuong-nguyen/id1004963752"
+//        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
+showAds()
     }
     
     @IBAction func Click(sender: AnyObject) {
