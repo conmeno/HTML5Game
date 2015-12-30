@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "960871391C32467F00A93494"
-               BuildableName = "HTML5 Game.app"
-               BlueprintName = "HTML5 Game"
-               ReferencedContainer = "container:HTML5 Game.xcodeproj">
+               BuildableName = "Spin Hexagon.app"
+               BlueprintName = "Spin Hexagon"
+               ReferencedContainer = "container:Spin Hexagon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9608714D1C32467F00A93494"
-               BuildableName = "HTML5 GameTests.xctest"
-               BlueprintName = "HTML5 GameTests"
-               ReferencedContainer = "container:HTML5 Game.xcodeproj">
+               BuildableName = "Spin Hexagon.xctest"
+               BlueprintName = "Spin HexagonTests"
+               ReferencedContainer = "container:Spin Hexagon.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "960871581C32467F00A93494"
-               BuildableName = "HTML5 GameUITests.xctest"
-               BlueprintName = "HTML5 GameUITests"
-               ReferencedContainer = "container:HTML5 Game.xcodeproj">
+               BuildableName = "Spin Hexagon.xctest"
+               BlueprintName = "Spin HexagonUITests"
+               ReferencedContainer = "container:Spin Hexagon.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "960871391C32467F00A93494"
-            BuildableName = "HTML5 Game.app"
-            BlueprintName = "HTML5 Game"
-            ReferencedContainer = "container:HTML5 Game.xcodeproj">
+            BuildableName = "Spin Hexagon.app"
+            BlueprintName = "Spin Hexagon"
+            ReferencedContainer = "container:Spin Hexagon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "960871391C32467F00A93494"
-            BuildableName = "HTML5 Game.app"
-            BlueprintName = "HTML5 Game"
-            ReferencedContainer = "container:HTML5 Game.xcodeproj">
+            BuildableName = "Spin Hexagon.app"
+            BlueprintName = "Spin Hexagon"
+            ReferencedContainer = "container:Spin Hexagon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "960871391C32467F00A93494"
-            BuildableName = "HTML5 Game.app"
-            BlueprintName = "HTML5 Game"
-            ReferencedContainer = "container:HTML5 Game.xcodeproj">
+            BuildableName = "Spin Hexagon.app"
+            BlueprintName = "Spin Hexagon"
+            ReferencedContainer = "container:Spin Hexagon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
