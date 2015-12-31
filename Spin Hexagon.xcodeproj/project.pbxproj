@@ -459,6 +459,7 @@
 				PRODUCT_NAME = "Spin Hexagon";
 				SWIFT_OBJC_BRIDGING_HEADER = "HTML5 Game/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -480,6 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "HTML5Game3005.Spin-Hexagon";
 				PRODUCT_NAME = "Spin Hexagon";
 				SWIFT_OBJC_BRIDGING_HEADER = "HTML5 Game/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
