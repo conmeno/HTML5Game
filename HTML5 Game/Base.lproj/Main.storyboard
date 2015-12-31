@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spin_Hexagon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hexspin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -90,7 +90,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZu-hx-07T">
                                 <rect key="frame" x="477" y="30" width="103" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.14933359686763004" blue="0.6916179632239734" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.52780591970000001" green="0.68865990479999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="103" id="4tf-sa-v80"/>
                                     <constraint firstAttribute="height" constant="30" id="iXJ-1q-0KH"/>
