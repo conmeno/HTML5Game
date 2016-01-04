@@ -24,6 +24,7 @@
 		960871821C32785200A93494 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960871811C32785200A93494 /* GoogleMobileAds.framework */; };
 		960871AD1C3284D600A93494 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 960871AC1C3284D600A93494 /* html */; };
 		961FCD1D1C33CDF300A22965 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FCD1C1C33CDF300A22965 /* Data.swift */; };
+		966D18FF1C3A2C8E00B0B63C /* mm-ad-sdk-ios-6.1.0-222a9a3.zip in Resources */ = {isa = PBXBuildFile; fileRef = 966D18FE1C3A2C8E00B0B63C /* mm-ad-sdk-ios-6.1.0-222a9a3.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		960871811C32785200A93494 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		960871AC1C3284D600A93494 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		961FCD1C1C33CDF300A22965 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		966D18FE1C3A2C8E00B0B63C /* mm-ad-sdk-ios-6.1.0-222a9a3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "mm-ad-sdk-ios-6.1.0-222a9a3.zip"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		960871311C32467F00A93494 = {
 			isa = PBXGroup;
 			children = (
+				966D18FE1C3A2C8E00B0B63C /* mm-ad-sdk-ios-6.1.0-222a9a3.zip */,
 				960871811C32785200A93494 /* GoogleMobileAds.framework */,
 				960871751C3247B300A93494 /* AdSupport.framework */,
 				960871731C3247AE00A93494 /* StoreKit.framework */,
@@ -271,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966D18FF1C3A2C8E00B0B63C /* mm-ad-sdk-ios-6.1.0-222a9a3.zip in Resources */,
 				960871481C32467F00A93494 /* LaunchScreen.storyboard in Resources */,
 				960871AD1C3284D600A93494 /* html in Resources */,
 				960871451C32467F00A93494 /* Assets.xcassets in Resources */,
