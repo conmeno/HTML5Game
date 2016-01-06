@@ -18,26 +18,9 @@ class Data {
     
         let gBanner : String = "ca-app-pub-1505076893194411/3614169288"
         let gFull : String = "ca-app-pub-1505076893194411/5090902481"
-    let TestDeviceID: String = "bf231d9ce0216bff6d43f926c9ce74e9"
+    let TestDeviceID: String = "5971424a69ca10bbc97be33f9614b96a"
         let cAppID: String = "5689e7102fdf343e2e1f4d68"
         let cSign : String = "45b2e711a9b62a5e683a3d44e9e04219a90bf9d6"
+        //let MMediaFull: String = "217869"
     
-    
-//    lieuthanhsangcc@gmail.com
-//    Spin Banner - Edit
-//    Ad unit ID: ca-app-pub-2184084082579225/9208597191
-//    Banner
-//    1 ad source
-//    Not applicable
-//    
-//    Spin Full
-//    Ad unit ID: ca-app-pub-2184084082579225/1685330392
-//    chartboost
-//    
-//    App ID
-//    56820c80a8b63c7fe6aa3a9d
-//    App Signature
-//    9cbe7292c9412cfed28a3801711eb2ed714eeb81
-    //}
-    
-}
+ }

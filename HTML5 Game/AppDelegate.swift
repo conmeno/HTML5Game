@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         
         Chartboost.startWithAppId(data.cAppID, appSignature: data.cSign, delegate: self)
         
+         //MMSDK.sharedInstance()
+            //MMSDK.initializeWithSettings(nil, withUserSettings: nil)
+        
         return true
     }
 

@@ -33,8 +33,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
     @IBOutlet weak var textDevice: UITextView!
     
     var interstitial: GADInterstitial!
-    
-    
+    //var mmFULL:MMInterstitialAd!
     @IBOutlet weak var webView: UIWebView!
     //new funciton
     @IBOutlet weak var AdOption: UIView!
@@ -55,7 +54,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //loadMMFULL()
         CheckAdOptionValue()
         if(showAd())
         {
@@ -79,6 +78,14 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDe
         LoadWebView()
        
     }
+//    func loadMMFULL()
+//    {
+//        self.mmFULL = MMInterstitialAd.init(placementId: data.MMediaFull)
+//        self.mmFULL.delegate = self;
+//        //self.mmFULL.modalTransitionStyle = MMa UIModalTransitionStyleCoverVertical;
+//        mmFULL.load(nil)
+//        mmFULL.showFromViewController(self)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -387,8 +394,44 @@ showAds()
         // relayoutViews()
     }
     
-
-
+    
+//    ////////////////////////////////
+//    // The output below is limited by 1 KB.
+//    // Please Sign Up (Free!) to remove this limitation.
+//    
+//    func interstitialAdLoadDidSucceed(ad: MMInterstitialAd) {
+//       
+//            self.mmFULL.showFromViewController(self)
+//        
+//        }
+//    }
+//    
+//    func interstitialAd(ad: MMInterstitialAd, loadDidFailWithError error: NSError) {
+//        NSLog("Interstitial load failed: %@.", error)
+//             }
+//    
+//    func interstitialAdWillDisplay(ad: MMInterstitialAd) {
+//        NSLog("Interstitial will display.")
+//    }
+//    
+//    func interstitialAdDidDisplay(ad: MMInterstitialAd) {
+//        NSLog("Interstitial did display.")
+//
+//}
+//    
+//    func interstitialAdWillDismiss(ad: MMInterstitialAd) {
+//        NSLog("Interstitial will dismiss.")
+//    }
+//    
+//    func interstitialAdDidDismiss(ad: MMInterstitialAd) {
+//        NSLog("Interstitial did dismiss.")
+//        
+//    }
+//    
+//    func interstitialAdTapped(ad: MMInterstitialAd) {
+//
+//
+//
+//}
 
 }
-
