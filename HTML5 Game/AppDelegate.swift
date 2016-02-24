@@ -12,14 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
 
     var window: UIWindow?
-    let data = Data()
-
+   
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         
+        let data = Data()
         Chartboost.startWithAppId(data.cAppID, appSignature: data.cSign, delegate: self)
         
+        AmazonAdRegistration.sharedRegistration().setAppKey(data.AmazonKey)
+        AmazonAdRegistration.sharedRegistration().setLogging(true)
         return true
     }
 
