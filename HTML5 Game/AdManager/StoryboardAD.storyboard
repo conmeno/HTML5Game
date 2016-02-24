@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lsm-U3-Fee"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vgg-YD-ba1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google Full" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bi-Ak-Z6H">
@@ -269,6 +269,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="sw1" destination="wOF-1C-lwA" id="Z4c-B2-2Sh"/>
                         <outlet property="sw2" destination="B9w-ww-hV3" id="nI1-bu-eMa"/>
@@ -285,18 +286,19 @@
             </objects>
             <point key="canvasLocation" x="249" y="-10"/>
         </scene>
-        <!--View Controller-->
+        <!--Google Ad Editor-->
         <scene sceneID="a2y-3r-aga">
             <objects>
-                <viewController storyboardIdentifier="GoogleAdEditorView" id="lYM-86-h5Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoogleAdEditorView" id="lYM-86-h5Y" customClass="GoogleAdEditor" customModule="Spin_Hexagon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WRH-RW-xIe"/>
                         <viewControllerLayoutGuide type="bottom" id="Efy-sa-6g1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XL7-eI-Vpt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner Unit ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fo-F3-sXU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner Ad Unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fo-F3-sXU">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -327,11 +329,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ca-app-pub-1143139991223410/7703181082" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jXX-eV-5EO">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-Y3-XOc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.24218112929999999" blue="0.72934539769999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,8 +338,11 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="8" y="155" width="134" height="37"/>
                                 </variation>
+                                <connections>
+                                    <action selector="ApplyBannerUnit:" destination="lYM-86-h5Y" eventType="touchUpInside" id="0hJ-fm-Zwc"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner Unit ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcg-J8-rGV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Ad Unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcg-J8-rGV">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -360,11 +360,19 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="8" y="289" width="134" height="37"/>
                                 </variation>
+                                <connections>
+                                    <action selector="ApplyFullUnit:" destination="lYM-86-h5Y" eventType="touchUpInside" id="a9B-Tv-GUS"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ca-app-pub-1143139991223410/7703181082" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="dgS-o9-bcs">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ca-app-pub-1143139991223410/7703181082" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jXX-eV-5EO">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -382,49 +390,195 @@
                             <mask key="subviews">
                                 <exclude reference="8Fo-F3-sXU"/>
                                 <exclude reference="js1-QO-gyy"/>
-                                <exclude reference="jXX-eV-5EO"/>
                                 <exclude reference="Nra-Y3-XOc"/>
                                 <exclude reference="bcg-J8-rGV"/>
                                 <exclude reference="fzX-yY-JNW"/>
                                 <exclude reference="dgS-o9-bcs"/>
+                                <exclude reference="jXX-eV-5EO"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="FaK-ZJ-YFf"/>
+                                <exclude reference="nx3-73-HE8"/>
+                                <exclude reference="xTl-gC-P4P"/>
                                 <exclude reference="M6i-26-mzr"/>
                                 <exclude reference="h3v-bd-zBY"/>
                                 <exclude reference="vrZ-G4-nLs"/>
                                 <exclude reference="P5B-eJ-1C1"/>
                                 <exclude reference="kDj-vF-fng"/>
-                                <exclude reference="FaK-ZJ-YFf"/>
-                                <exclude reference="nx3-73-HE8"/>
-                                <exclude reference="xTl-gC-P4P"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="8Fo-F3-sXU"/>
                                 <include reference="js1-QO-gyy"/>
-                                <include reference="jXX-eV-5EO"/>
                                 <include reference="Nra-Y3-XOc"/>
                                 <include reference="bcg-J8-rGV"/>
                                 <include reference="fzX-yY-JNW"/>
                                 <include reference="dgS-o9-bcs"/>
+                                <include reference="jXX-eV-5EO"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="FaK-ZJ-YFf"/>
+                                <include reference="nx3-73-HE8"/>
+                                <include reference="xTl-gC-P4P"/>
                                 <include reference="M6i-26-mzr"/>
                                 <include reference="h3v-bd-zBY"/>
                                 <include reference="vrZ-G4-nLs"/>
                                 <include reference="P5B-eJ-1C1"/>
                                 <include reference="kDj-vF-fng"/>
-                                <include reference="FaK-ZJ-YFf"/>
-                                <include reference="nx3-73-HE8"/>
-                                <include reference="xTl-gC-P4P"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="txtAdmobBanner" destination="jXX-eV-5EO" id="DB2-99-DhX"/>
+                        <outlet property="txtAdmobFull" destination="dgS-o9-bcs" id="bxS-rS-eoT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igj-fp-m3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933" y="-22"/>
+            <point key="canvasLocation" x="777" y="-106"/>
+        </scene>
+        <!--Chartboost Ad Editor-->
+        <scene sceneID="kng-Ly-Zhn">
+            <objects>
+                <viewController storyboardIdentifier="ChartboostAdEditorView" id="Nfh-9e-sJc" customClass="ChartboostAdEditor" customModule="Spin_Hexagon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHT-cK-bpq"/>
+                        <viewControllerLayoutGuide type="bottom" id="dAM-Rp-XcG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6mU-DQ-Vad">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Iu-AZ-keX">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="88" width="124" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chartboost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2e-6b-cbD">
+                                <rect key="frame" x="20" y="20" width="105" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="Dpa-G0-VMv"/>
+                                    <constraint firstAttribute="height" constant="46" id="QWk-cI-8zB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.90228239529999998" green="0.14050382619999999" blue="0.70423728549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Dpa-G0-VMv"/>
+                                        <exclude reference="QWk-cI-8zB"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Dpa-G0-VMv"/>
+                                        <include reference="QWk-cI-8zB"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRr-pb-tjS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.24218112929999999" blue="0.72934539769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Apply">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="155" width="134" height="37"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ApplyChartAppID:" destination="Nfh-9e-sJc" eventType="touchUpInside" id="nzP-mp-qSM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmI-at-0wr">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="222" width="124" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaD-f8-Tj6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.24218112929999999" blue="0.72934539769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Apply">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="289" width="134" height="37"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ApplyChartSign:" destination="Nfh-9e-sJc" eventType="touchUpInside" id="NU7-Xk-eAY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1661b8248912f9cd312730a9f978b658bf97963a" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-qS-6aG">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="4" y="251" width="288" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="56cd558df789821abe32cfcc" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ArO-80-YDL">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="4" y="117" width="288" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v2e-6b-cbD" firstAttribute="top" secondItem="gHT-cK-bpq" secondAttribute="bottom" constant="8" id="KT1-8u-UIZ"/>
+                            <constraint firstItem="v2e-6b-cbD" firstAttribute="centerX" secondItem="6mU-DQ-Vad" secondAttribute="centerX" id="aM2-vS-CGg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5Iu-AZ-keX"/>
+                                <exclude reference="v2e-6b-cbD"/>
+                                <exclude reference="kRr-pb-tjS"/>
+                                <exclude reference="HmI-at-0wr"/>
+                                <exclude reference="qaD-f8-Tj6"/>
+                                <exclude reference="pBc-qS-6aG"/>
+                                <exclude reference="ArO-80-YDL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="KT1-8u-UIZ"/>
+                                <exclude reference="aM2-vS-CGg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5Iu-AZ-keX"/>
+                                <include reference="v2e-6b-cbD"/>
+                                <include reference="kRr-pb-tjS"/>
+                                <include reference="HmI-at-0wr"/>
+                                <include reference="qaD-f8-Tj6"/>
+                                <include reference="pBc-qS-6aG"/>
+                                <include reference="ArO-80-YDL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="KT1-8u-UIZ"/>
+                                <include reference="aM2-vS-CGg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="txtAppID" destination="ArO-80-YDL" id="q44-3z-6yC"/>
+                        <outlet property="txtSign" destination="pBc-qS-6aG" id="2CE-Zt-AkS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gga-bH-ixX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="421"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B666AED1C7DF41700B936B8 /* ChartboostAdEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B666AEC1C7DF41700B936B8 /* ChartboostAdEditor.swift */; };
 		9608713E1C32467F00A93494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608713D1C32467F00A93494 /* AppDelegate.swift */; };
 		960871401C32467F00A93494 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608713F1C32467F00A93494 /* ViewController.swift */; };
 		960871431C32467F00A93494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960871411C32467F00A93494 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B666AEC1C7DF41700B936B8 /* ChartboostAdEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartboostAdEditor.swift; path = AdManager/ChartboostAdEditor.swift; sourceTree = "<group>"; };
 		9608713A1C32467F00A93494 /* Spin Hexagon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spin Hexagon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9608713D1C32467F00A93494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9608713F1C32467F00A93494 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		960AA9161C7D9007005CD803 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
+				1B666AEC1C7DF41700B936B8 /* ChartboostAdEditor.swift */,
 				960AA9171C7D9014005CD803 /* AdManagerView.swift */,
 				960AA9181C7D9014005CD803 /* Bridging-header.h */,
 				960AA9191C7D9014005CD803 /* cclass.h */,
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B666AED1C7DF41700B936B8 /* ChartboostAdEditor.swift in Sources */,
 				960AA9211C7D9014005CD803 /* MyAd.swift in Sources */,
 				960AA9201C7D9014005CD803 /* Data.swift in Sources */,
 				960AA91E1C7D9014005CD803 /* AdManagerView.swift in Sources */,

@@ -26,6 +26,8 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var isAd4 = true//admob banner
     var isAd5 = false//adcolony
     var isAd6 = true//amazon
+    var isAd7 = true//Admob Edit
+    var isAd8 = true//ChartBoost Edit
     
     var isFirsAdmob = false
     var isFirstChart = false
@@ -34,6 +36,8 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var AdmobBannerTop = false
     var AdNumber = 1
     let data = Data()
+    
+   
     
     init(root: UIViewController )
     {
@@ -207,6 +211,51 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             isAd6 = NSUserDefaults.standardUserDefaults().objectForKey("ad6") as! Bool
             
         }
+        
+        
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad7") != nil)
+        {
+            isAd7 = NSUserDefaults.standardUserDefaults().objectForKey("ad7") as! Bool
+            
+        }
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad8") != nil)
+        {
+            isAd8 = NSUserDefaults.standardUserDefaults().objectForKey("ad8") as! Bool
+            
+        }
+        
+        //get edit ad unit ID for Admob
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("AdmobBannerID") != nil)
+        {
+            data.GBannerAdUnitEdited = NSUserDefaults.standardUserDefaults().objectForKey("AdmobBannerID") as! String
+            
+        }
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("AdmobFullID") != nil)
+        {
+            data.GFullAdUnitEdited = NSUserDefaults.standardUserDefaults().objectForKey("AdmobFullID") as! String
+            
+        }
+        
+        //get edited appid & sign from Chartboost
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("CAppID") != nil)
+        {
+            data.ChartboostAppIDEdited = NSUserDefaults.standardUserDefaults().objectForKey("CAppID") as! String
+            
+        }
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("CSign") != nil)
+        {
+            data.ChartboostSignEdited = NSUserDefaults.standardUserDefaults().objectForKey("CSign") as! String
+            
+        }
+
+
+        
         
         
         

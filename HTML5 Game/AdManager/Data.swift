@@ -20,7 +20,10 @@ class Data {
     
    let AmazonKey: String = "91d5863365e342de8952b415346495c4"
     
-    
+    var GBannerAdUnitEdited: String = ""
+    var GFullAdUnitEdited: String = ""
+    var ChartboostAppIDEdited: String = ""
+    var ChartboostSignEdited: String = ""
 //    App: Spin Hexagon 2016 (iOS)
 //    
 //    Ad unit(s):
