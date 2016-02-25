@@ -17,10 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         // Override point for customization after application launch.
         
         
-        let data = Data()
-        Chartboost.startWithAppId(data.cAppID, appSignature: data.cSign, delegate: self)
+        Utility.SetUpAdData()
         
-        AmazonAdRegistration.sharedRegistration().setAppKey(data.AmazonKey)
+        Chartboost.startWithAppId(Utility.ChartboostAppID, appSignature: Utility.ChartboostSign, delegate: self)
+        
+        AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
         AmazonAdRegistration.sharedRegistration().setLogging(true)
         return true
     }

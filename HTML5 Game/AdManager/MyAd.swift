@@ -20,23 +20,17 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var timerAd60:NSTimer?
     var timerAmazon:NSTimer?
     
-    var isAd1 = true//admob full
-    var isAd2 = false//charbootst
-    var isAd3 = false//auto chartboost
-    var isAd4 = true//admob banner
-    var isAd5 = false//adcolony
-    var isAd6 = true//amazon
-    var isAd7 = true//Admob Edit
-    var isAd8 = true//ChartBoost Edit
-    
     var isFirsAdmob = false
     var isFirstChart = false
-    var amazonLocationY:CGFloat = -50.0
+    var amazonLocationY:CGFloat = 50.0
     var AdmobLocationY: CGFloat = 20
     var AdmobBannerTop = false
     var AdNumber = 1
     let data = Data()
     
+    
+    
+ 
    
     
     init(root: UIViewController )
@@ -44,19 +38,19 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         self.viewController = root
         
     }
+ 
     func ViewDidload()
     {
-        //setupButton()
+     
         
-        CheckAdOptionValue()
         if(showAd())
         {
-            if(isAd4)
+            if(Utility.isAd4)
             {
                 ShowAdmobBanner()
                 self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
             }
-            if(isAd1)
+            if(Utility.isAd1)
             {
                 self.interstitial = self.createAndLoadAd()
                 showAdmob()
@@ -64,21 +58,21 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             
             
             
-            if(isAd1 || isAd2)
+            if(Utility.isAd1 || Utility.isAd2)
             {
                 self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAD10:", userInfo: nil, repeats: true)
             }
             
-            if(isAd2)
+            if(Utility.isAd2)
             {
                 showChartBoost()
             }
-            if(isAd3)
+            if(Utility.isAd3)
             {
                 self.timerAd60 = NSTimer.scheduledTimerWithTimeInterval(90, target: self, selector: "timerAD60:", userInfo: nil, repeats: true)
             }
             
-            if(isAd6)
+            if(Utility.isAd6)
             {
                 showAmazonBanner()
                 self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
@@ -89,8 +83,8 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     
     func createAndLoadAd() -> GADInterstitial
     {
-        let ad = GADInterstitial(adUnitID: data.gFull)
-        
+        let ad = GADInterstitial(adUnitID: Utility.GFullAdUnit)
+        print(Utility.GFullAdUnit)
         let request = GADRequest()
         
         request.testDevices = [kGADSimulatorID, data.TestDeviceID]
@@ -136,6 +130,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     
     func ShowAdmobBanner()
     {
+        
         //let viewController = appDelegate1.window!.rootViewController as! GameViewController
         let w = viewController.view.bounds.width
         let h = viewController.view.bounds.height
@@ -144,7 +139,8 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             AdmobLocationY = h - 50
         }
         gBannerView = GADBannerView(frame: CGRectMake(0, AdmobLocationY , w, 50))
-        gBannerView?.adUnitID = data.gBanner
+        gBannerView?.adUnitID = Utility.GBannerAdUnit
+        print(Utility.GBannerAdUnit)
         gBannerView?.delegate = self
         gBannerView?.rootViewController = viewController
         viewController.view?.addSubview(gBannerView)
@@ -168,98 +164,6 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         return true
     }
     
-    func CheckAdOptionValue()
-    {
-        //ad1 admob
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad1") != nil)
-        {
-            isAd1 = NSUserDefaults.standardUserDefaults().objectForKey("ad1") as! Bool
-            
-        }
-        
-        //ad2 charboost
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad2") != nil)
-        {
-            isAd2 = NSUserDefaults.standardUserDefaults().objectForKey("ad2") as! Bool
-            
-        }
-        
-        
-        //ad3 ...
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad3") != nil)
-        {
-            isAd3 = NSUserDefaults.standardUserDefaults().objectForKey("ad3") as! Bool
-            
-        }
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad4") != nil)
-        {
-            isAd4 = NSUserDefaults.standardUserDefaults().objectForKey("ad4") as! Bool
-            
-        }
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad5") != nil)
-        {
-            isAd5 = NSUserDefaults.standardUserDefaults().objectForKey("ad5") as! Bool
-            
-        }
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad6") != nil)
-        {
-            isAd6 = NSUserDefaults.standardUserDefaults().objectForKey("ad6") as! Bool
-            
-        }
-        
-        
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad7") != nil)
-        {
-            isAd7 = NSUserDefaults.standardUserDefaults().objectForKey("ad7") as! Bool
-            
-        }
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad8") != nil)
-        {
-            isAd8 = NSUserDefaults.standardUserDefaults().objectForKey("ad8") as! Bool
-            
-        }
-        
-        //get edit ad unit ID for Admob
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("AdmobBannerID") != nil)
-        {
-            data.GBannerAdUnitEdited = NSUserDefaults.standardUserDefaults().objectForKey("AdmobBannerID") as! String
-            
-        }
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("AdmobFullID") != nil)
-        {
-            data.GFullAdUnitEdited = NSUserDefaults.standardUserDefaults().objectForKey("AdmobFullID") as! String
-            
-        }
-        
-        //get edited appid & sign from Chartboost
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("CAppID") != nil)
-        {
-            data.ChartboostAppIDEdited = NSUserDefaults.standardUserDefaults().objectForKey("CAppID") as! String
-            
-        }
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("CSign") != nil)
-        {
-            data.ChartboostSignEdited = NSUserDefaults.standardUserDefaults().objectForKey("CSign") as! String
-            
-        }
-
-
-        
-        
-        
-        
-    }
     
     
     
@@ -267,7 +171,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         
         if(showAd())
         {
-            if(isAd1 && isFirsAdmob == false)
+            if(Utility.isAd1 && isFirsAdmob == false)
             {
                 if(self.interstitial.isReady)
                 {
@@ -275,7 +179,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                     isFirsAdmob = true
                 }
             }
-            if(isAd2 && isFirstChart == false)
+            if(Utility.isAd2 && isFirstChart == false)
             {
                 Chartboost.showInterstitial("First stage")
                 
@@ -294,7 +198,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         
         if(showAd())
         {
-            if(isAd2)
+            if(Utility.isAd2)
             {
                 showChartBoost()
             }
@@ -380,7 +284,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     //amazon
     ///////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////
-    @IBOutlet var amazonAdView: AmazonAdView!
+    var amazonAdView: AmazonAdView!
     func showAmazonBanner()
     {
         amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
@@ -430,6 +334,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     }
     
     func adViewDidLoad(view: AmazonAdView!) -> Void {
+        
         viewController.view.addSubview(amazonAdView)
     }
     

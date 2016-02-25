@@ -73,11 +73,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startGameHover(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "StoryboardAD", bundle: nil)
-        
-        let WebDetailView = storyboard.instantiateViewControllerWithIdentifier("AdView1") as UIViewController
-        
-        self.presentViewController(WebDetailView, animated: true, completion: nil)
+//        let storyboard = UIStoryboard(name: "StoryboardAD", bundle: nil)
+//        
+//        let WebDetailView = storyboard.instantiateViewControllerWithIdentifier("AdView1") as UIViewController
+//        
+//        self.presentViewController(WebDetailView, animated: true, completion: nil)
+        Utility.OpenView("AdView1", view: self)
         
     }
 

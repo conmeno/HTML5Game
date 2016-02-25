@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import GoogleMobileAds
+
 class Data {
     
     //Ladybug

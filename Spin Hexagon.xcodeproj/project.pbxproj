@@ -48,6 +48,7 @@
 		960AA9461C7D98F9005CD803 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960AA9451C7D98F9005CD803 /* Social.framework */; };
 		960AA9481C7D9903005CD803 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960AA9471C7D9903005CD803 /* WebKit.framework */; };
 		960AA94A1C7DAFAA005CD803 /* GoogleAdEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960AA9491C7DAFAA005CD803 /* GoogleAdEditor.swift */; };
+		960AA94C1C7EB584005CD803 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960AA94B1C7EB584005CD803 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		960AA9451C7D98F9005CD803 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		960AA9471C7D9903005CD803 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/PrivateFrameworks/WebKit.framework; sourceTree = SDKROOT; };
 		960AA9491C7DAFAA005CD803 /* GoogleAdEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAdEditor.swift; path = AdManager/GoogleAdEditor.swift; sourceTree = "<group>"; };
+		960AA94B1C7EB584005CD803 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = AdManager/Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 				960AA91C1C7D9014005CD803 /* MyAd.swift */,
 				960AA91D1C7D9014005CD803 /* StoryboardAD.storyboard */,
 				960AA9491C7DAFAA005CD803 /* GoogleAdEditor.swift */,
+				960AA94B1C7EB584005CD803 /* Utility.swift */,
 			);
 			name = Ad;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			files = (
 				1B666AED1C7DF41700B936B8 /* ChartboostAdEditor.swift in Sources */,
 				960AA9211C7D9014005CD803 /* MyAd.swift in Sources */,
+				960AA94C1C7EB584005CD803 /* Utility.swift in Sources */,
 				960AA9201C7D9014005CD803 /* Data.swift in Sources */,
 				960AA91E1C7D9014005CD803 /* AdManagerView.swift in Sources */,
 				960AA94A1C7DAFAA005CD803 /* GoogleAdEditor.swift in Sources */,

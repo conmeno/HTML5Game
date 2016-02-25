@@ -20,6 +20,10 @@ class ChartboostAdEditor: UIViewController
     
     @IBOutlet weak var txtSign: UITextField!
      
+    @IBAction func CloseForm(sender: AnyObject) {
+        Utility.OpenView("AdView1", view: self)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
