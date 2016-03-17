@@ -30,7 +30,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var isFirsAdmob = false
     var isFirstChart = false
     var isApplovinShowed = false
-    var amazonLocationY:CGFloat = 20.0
+    var amazonLocationY:CGFloat = -30.0
     var AdmobLocationY: CGFloat = 20
     var AdmobBannerTop = false
     var AdNumber = 1
@@ -465,7 +465,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     func showAmazonFull()
     {
         interstitialAmazon.presentFromViewController(self.viewController)
-        
+     
     }
     
     /////////////////////////////////////////////////////////////
