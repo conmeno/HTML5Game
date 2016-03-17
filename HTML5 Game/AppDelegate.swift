@@ -16,13 +16,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+ 
+        
+        Utility.SetUpAdData()
+        
+        if(Utility.isAd2)
+        {
+            Chartboost.startWithAppId(Utility.ChartboostAppID, appSignature: Utility.ChartboostSign, delegate: self)
+        }
+        
+        if(Utility.isAd6)
+        {
+            AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
+            AmazonAdRegistration.sharedRegistration().setLogging(true)
+        }
+        
+        if(Utility.isAd8)
+        {
+            
+            //vungle
+            //let sdk = VungleSDK.sharedSDK()
+            //sdk.startWithAppId(Utility.VungleID)
+        }
         
         
-        Chartboost.startWithAppId(data.cAppID, appSignature: data.cSign, delegate: self)
         
-         //MMSDK.sharedInstance()
-            //MMSDK.initializeWithSettings(nil, withUserSettings: nil)
+        //applovin
+        if(Utility.isAd9)
+        {
+            ALSdk.initializeSdk()
+        }
         
+        if(Utility.isAd5)
+        {
+            AdColony.configureWithAppID(Utility.AdcolonyAppID, zoneIDs: [Utility.AdcolonyZoneID], delegate: nil, logging: true)
+        }
+        
+
         return true
     }
 
