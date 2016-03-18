@@ -13,11 +13,11 @@ class Data {
     //10240 game
     
     //URL setup online
-    let AdURL: String = "http://www.tony.somee.com/Hexspin.txt"
+    let AdURL: String = "http://www.tony.somee.com/spin-hexagon.txt"
     
     //google
-    let gBanner : String = "ca-app-pub-5651387315695971/6129296844"
-    let gFull : String = "ca-app-pub-5651387315695971/7606030049"
+    let gBanner : String = ""
+    let gFull : String = ""
     let TestDeviceID: String = "25229a4d09c90bcec58dec27036a470b"
     
 
@@ -25,14 +25,14 @@ class Data {
     let cAppID: String = ""
     let cSign : String = ""
     //amazon
-    let AmazonKey: String = "6502017581134d118ed939d601e14fb8"
+    let AmazonKey: String = ""
     
     //adcolony
-    let AdcolonyAppID: String = "appff483dc3fe0c42648a"
-    let AdcolonyZoneID: String = "vz1879f2a41e944be7b6"
+    let AdcolonyAppID: String = ""
+    let AdcolonyZoneID: String = ""
     
     //revmob appID
-    let RevmobID: String = "56e90e99d57146f7411ad1f0"
+    let RevmobID: String = ""
     
     //Vungle ID
     let VungleID: String = ""
