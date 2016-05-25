@@ -10,15 +10,15 @@ import Foundation
 
 class Data {
     
-    //10240 game
+    //5120 game
     
     //URL setup online
-    let AdURL: String = "http://www.tony.somee.com/Hexspin.txt"
+     let AdURL: String = "http://webappchannel.com/tonyapp/hexspin-v4.txt"
     
     //google
-    let gBanner : String = "ca-app-pub-5651387315695971/6129296844"
-    let gFull : String = "ca-app-pub-5651387315695971/7606030049"
-    let TestDeviceID: String = "25229a4d09c90bcec58dec27036a470b"
+    let gBanner : String = ""
+    let gFull : String = ""
+    let TestDeviceID: String = ""
     
 
     //chartboost
@@ -32,10 +32,14 @@ class Data {
     let AdcolonyZoneID: String = "vz1879f2a41e944be7b6"
     
     //revmob appID
-    let RevmobID: String = "56e90e99d57146f7411ad1f0"
+    let RevmobID: String = "5745b2ebfe3ebe4f6ad53874"
     
     //Vungle ID
     let VungleID: String = ""
+    
+    let UnityGameId: String = ""
+    
+    let SonicID: String = ""
     
     
     

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B105AB11CF0A9AB0066BA2C /* ISDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B105AB01CF0A9AB0066BA2C /* ISDelegate.swift */; };
+		1B105AB31CF0AABA0066BA2C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B105AB21CF0AABA0066BA2C /* SpriteKit.framework */; };
+		1B105AB91CF0AB040066BA2C /* Supersonic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B105AB41CF0AB040066BA2C /* Supersonic.framework */; };
+		1B105ABA1CF0AB040066BA2C /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B105AB51CF0AB040066BA2C /* UnityAds.bundle */; };
+		1B105ABB1CF0AB040066BA2C /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B105AB61CF0AB040066BA2C /* UnityAds.framework */; };
+		1B105ABC1CF0AB040066BA2C /* VungleSDK.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 1B105AB71CF0AB040066BA2C /* VungleSDK.embeddedframework */; };
+		1B105ABD1CF0AB040066BA2C /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B105AB81CF0AB040066BA2C /* VungleSDK.framework */; };
 		9608713E1C32467F00A93494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608713D1C32467F00A93494 /* AppDelegate.swift */; };
 		960871401C32467F00A93494 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608713F1C32467F00A93494 /* ViewController.swift */; };
 		960871431C32467F00A93494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960871411C32467F00A93494 /* Main.storyboard */; };
@@ -14,7 +21,6 @@
 		960871481C32467F00A93494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960871461C32467F00A93494 /* LaunchScreen.storyboard */; };
 		960871531C32467F00A93494 /* HTML5_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960871521C32467F00A93494 /* HTML5_GameTests.swift */; };
 		9608715E1C32467F00A93494 /* HTML5_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608715D1C32467F00A93494 /* HTML5_GameUITests.swift */; };
-		9608716C1C32476900A93494 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9608716B1C32476900A93494 /* Chartboost.framework */; };
 		9608716E1C32479900A93494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9608716D1C32479900A93494 /* Foundation.framework */; };
 		960871701C3247A100A93494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9608716F1C3247A100A93494 /* UIKit.framework */; };
 		960871721C3247A800A93494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960871711C3247A800A93494 /* CoreGraphics.framework */; };
@@ -30,8 +36,6 @@
 		966A04C11C9A525800A11F57 /* StoryboardAD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966A04BA1C9A525800A11F57 /* StoryboardAD.storyboard */; };
 		966A04C21C9A525800A11F57 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A04BB1C9A525800A11F57 /* Utility.swift */; };
 		966A04C71C9A52B700A11F57 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A04C31C9A52B700A11F57 /* AdColony.framework */; };
-		966A04C81C9A52B700A11F57 /* applovin in Resources */ = {isa = PBXBuildFile; fileRef = 966A04C41C9A52B700A11F57 /* applovin */; };
-		966A04C91C9A52B700A11F57 /* libAppLovinSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A04C51C9A52B700A11F57 /* libAppLovinSdk.a */; };
 		966A04CA1C9A52B700A11F57 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A04C61C9A52B700A11F57 /* RevMobAds.framework */; };
 		966A04CC1C9A536200A11F57 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A04CB1C9A536200A11F57 /* libsqlite3.tbd */; };
 		966A04CE1C9A536900A11F57 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A04CD1C9A536900A11F57 /* libz.1.2.5.tbd */; };
@@ -74,6 +78,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B105AB01CF0A9AB0066BA2C /* ISDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ISDelegate.swift; path = AdManager/ISDelegate.swift; sourceTree = "<group>"; };
+		1B105AB21CF0AABA0066BA2C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		1B105AB41CF0AB040066BA2C /* Supersonic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Supersonic.framework; sourceTree = "<group>"; };
+		1B105AB51CF0AB040066BA2C /* UnityAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UnityAds.bundle; sourceTree = "<group>"; };
+		1B105AB61CF0AB040066BA2C /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
+		1B105AB71CF0AB040066BA2C /* VungleSDK.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = VungleSDK.embeddedframework; sourceTree = "<group>"; };
+		1B105AB81CF0AB040066BA2C /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
 		9608713A1C32467F00A93494 /* Hexspin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hexspin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9608713D1C32467F00A93494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9608713F1C32467F00A93494 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +98,6 @@
 		960871591C32467F00A93494 /* Hexspin.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hexspin.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9608715D1C32467F00A93494 /* HTML5_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML5_GameUITests.swift; sourceTree = "<group>"; };
 		9608715F1C32467F00A93494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9608716B1C32476900A93494 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		9608716D1C32479900A93494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9608716F1C3247A100A93494 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		960871711C3247A800A93494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,8 +115,6 @@
 		966A04BA1C9A525800A11F57 /* StoryboardAD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardAD.storyboard; path = AdManager/StoryboardAD.storyboard; sourceTree = "<group>"; };
 		966A04BB1C9A525800A11F57 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = AdManager/Utility.swift; sourceTree = "<group>"; };
 		966A04C31C9A52B700A11F57 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
-		966A04C41C9A52B700A11F57 /* applovin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = applovin; sourceTree = "<group>"; };
-		966A04C51C9A52B700A11F57 /* libAppLovinSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppLovinSdk.a; sourceTree = "<group>"; };
 		966A04C61C9A52B700A11F57 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		966A04CB1C9A536200A11F57 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		966A04CD1C9A536900A11F57 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
@@ -136,37 +144,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966A04DE1C9A53D200A11F57 /* WebKit.framework in Frameworks */,
-				966A04DC1C9A53CC00A11F57 /* Social.framework in Frameworks */,
-				966A04DA1C9A53B200A11F57 /* Security.framework in Frameworks */,
-				966A04D81C9A53AD00A11F57 /* QuartzCore.framework in Frameworks */,
+				1B105AB31CF0AABA0066BA2C /* SpriteKit.framework in Frameworks */,
+				966D19131C3A2DDD00B0B63C /* AVFoundation.framework in Frameworks */,
 				966A04D31C9A539A00A11F57 /* CoreAudio.framework in Frameworks */,
-				966A04D51C9A539A00A11F57 /* CoreData.framework in Frameworks */,
 				966A04D61C9A539A00A11F57 /* CoreFoundation.framework in Frameworks */,
-				960871721C3247A800A93494 /* CoreGraphics.framework in Frameworks */,
 				966D19111C3A2DD500B0B63C /* CoreLocation.framework in Frameworks */,
+				1B105ABB1CF0AB040066BA2C /* UnityAds.framework in Frameworks */,
 				966D191D1C3A6D3E00B0B63C /* CoreMedia.framework in Frameworks */,
 				966D190D1C3A2DC600B0B63C /* CoreTelephony.framework in Frameworks */,
+				966D19051C3A2DAC00B0B63C /* MediaPlayer.framework in Frameworks */,
+				966D19031C3A2DA300B0B63C /* MessageUI.framework in Frameworks */,
+				1B105ABD1CF0AB040066BA2C /* VungleSDK.framework in Frameworks */,
+				966A04D81C9A53AD00A11F57 /* QuartzCore.framework in Frameworks */,
+				966A04DC1C9A53CC00A11F57 /* Social.framework in Frameworks */,
+				960871741C3247AE00A93494 /* StoreKit.framework in Frameworks */,
+				966D19011C3A2D9500B0B63C /* SystemConfiguration.framework in Frameworks */,
+				960871701C3247A100A93494 /* UIKit.framework in Frameworks */,
+				966A04DE1C9A53D200A11F57 /* WebKit.framework in Frameworks */,
+				966A04DA1C9A53B200A11F57 /* Security.framework in Frameworks */,
+				966A04D51C9A539A00A11F57 /* CoreData.framework in Frameworks */,
+				960871721C3247A800A93494 /* CoreGraphics.framework in Frameworks */,
 				966A04CE1C9A536900A11F57 /* libz.1.2.5.tbd in Frameworks */,
 				966A04CC1C9A536200A11F57 /* libsqlite3.tbd in Frameworks */,
 				960871761C3247B300A93494 /* AdSupport.framework in Frameworks */,
 				966D19151C3A2DE300B0B63C /* AudioToolbox.framework in Frameworks */,
-				966D19131C3A2DDD00B0B63C /* AVFoundation.framework in Frameworks */,
 				966A04C71C9A52B700A11F57 /* AdColony.framework in Frameworks */,
 				966D19101C3A2DD500B0B63C /* CoreBluetooth.framework in Frameworks */,
 				966A04CA1C9A52B700A11F57 /* RevMobAds.framework in Frameworks */,
-				966A04C91C9A52B700A11F57 /* libAppLovinSdk.a in Frameworks */,
 				966D190A1C3A2DC000B0B63C /* EventKit.framework in Frameworks */,
+				1B105AB91CF0AB040066BA2C /* Supersonic.framework in Frameworks */,
 				966D190B1C3A2DC000B0B63C /* EventKitUI.framework in Frameworks */,
 				9608716E1C32479900A93494 /* Foundation.framework in Frameworks */,
-				966D19051C3A2DAC00B0B63C /* MediaPlayer.framework in Frameworks */,
 				966A04E01C9A54F100A11F57 /* AmazonAd.framework in Frameworks */,
-				966D19031C3A2DA300B0B63C /* MessageUI.framework in Frameworks */,
-				960871741C3247AE00A93494 /* StoreKit.framework in Frameworks */,
-				966D19011C3A2D9500B0B63C /* SystemConfiguration.framework in Frameworks */,
-				960871701C3247A100A93494 /* UIKit.framework in Frameworks */,
 				960871821C32785200A93494 /* GoogleMobileAds.framework in Frameworks */,
-				9608716C1C32476900A93494 /* Chartboost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +200,12 @@
 		960871311C32467F00A93494 = {
 			isa = PBXGroup;
 			children = (
+				1B105AB41CF0AB040066BA2C /* Supersonic.framework */,
+				1B105AB51CF0AB040066BA2C /* UnityAds.bundle */,
+				1B105AB61CF0AB040066BA2C /* UnityAds.framework */,
+				1B105AB71CF0AB040066BA2C /* VungleSDK.embeddedframework */,
+				1B105AB81CF0AB040066BA2C /* VungleSDK.framework */,
+				1B105AB21CF0AABA0066BA2C /* SpriteKit.framework */,
 				966A04DF1C9A54F100A11F57 /* AmazonAd.framework */,
 				966A04DD1C9A53D200A11F57 /* WebKit.framework */,
 				966A04DB1C9A53CC00A11F57 /* Social.framework */,
@@ -201,8 +217,6 @@
 				966A04CD1C9A536900A11F57 /* libz.1.2.5.tbd */,
 				966A04CB1C9A536200A11F57 /* libsqlite3.tbd */,
 				966A04C31C9A52B700A11F57 /* AdColony.framework */,
-				966A04C41C9A52B700A11F57 /* applovin */,
-				966A04C51C9A52B700A11F57 /* libAppLovinSdk.a */,
 				966A04C61C9A52B700A11F57 /* RevMobAds.framework */,
 				966D191C1C3A6D3E00B0B63C /* CoreMedia.framework */,
 				966D19141C3A2DE300B0B63C /* AudioToolbox.framework */,
@@ -221,7 +235,6 @@
 				960871711C3247A800A93494 /* CoreGraphics.framework */,
 				9608716F1C3247A100A93494 /* UIKit.framework */,
 				9608716D1C32479900A93494 /* Foundation.framework */,
-				9608716B1C32476900A93494 /* Chartboost.framework */,
 				9608713C1C32467F00A93494 /* HTML5 Game */,
 				960871511C32467F00A93494 /* HTML5 GameTests */,
 				9608715C1C32467F00A93494 /* HTML5 GameUITests */,
@@ -275,6 +288,7 @@
 		966A04B21C9A523000A11F57 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
+				1B105AB01CF0A9AB0066BA2C /* ISDelegate.swift */,
 				966A04B31C9A525800A11F57 /* AdManagerView.swift */,
 				966A04B41C9A525800A11F57 /* ADXML.swift */,
 				966A04B51C9A525800A11F57 /* Bridging-header.h */,
@@ -394,9 +408,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				960871481C32467F00A93494 /* LaunchScreen.storyboard in Resources */,
-				966A04C81C9A52B700A11F57 /* applovin in Resources */,
 				960871AD1C3284D600A93494 /* html in Resources */,
 				966A04C11C9A525800A11F57 /* StoryboardAD.storyboard in Resources */,
+				1B105ABC1CF0AB040066BA2C /* VungleSDK.embeddedframework in Resources */,
+				1B105ABA1CF0AB040066BA2C /* UnityAds.bundle in Resources */,
 				960871451C32467F00A93494 /* Assets.xcassets in Resources */,
 				960871431C32467F00A93494 /* Main.storyboard in Resources */,
 			);
@@ -431,6 +446,7 @@
 				966A04BD1C9A525800A11F57 /* ADXML.swift in Sources */,
 				966A04BE1C9A525800A11F57 /* cclass.m in Sources */,
 				9608713E1C32467F00A93494 /* AppDelegate.swift in Sources */,
+				1B105AB11CF0A9AB0066BA2C /* ISDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
