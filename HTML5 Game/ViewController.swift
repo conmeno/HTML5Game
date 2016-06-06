@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     func LoadWebView()
     {
-        if let path = NSBundle.mainBundle().pathForResource("html/index", ofType: "html") {
+        if let path = NSBundle.mainBundle().pathForResource("html2/ku", ofType: "htm") {
             // use path
             let text2 = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
             //println(text2)
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
             //            let requestURL1 = mainB.bundleURL
             
             
-            let baseURL = NSBundle.mainBundle().URLForResource("html/index", withExtension: "html")
+            let baseURL = NSBundle.mainBundle().URLForResource("html2/ku", withExtension: "htm")
             webView.loadHTMLString(text2!, baseURL: baseURL)
             
           

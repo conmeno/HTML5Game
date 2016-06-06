@@ -54,6 +54,7 @@
 		966D19131C3A2DDD00B0B63C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966D19121C3A2DDD00B0B63C /* AVFoundation.framework */; };
 		966D19151C3A2DE300B0B63C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966D19141C3A2DE300B0B63C /* AudioToolbox.framework */; };
 		966D191D1C3A6D3E00B0B63C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966D191C1C3A6D3E00B0B63C /* CoreMedia.framework */; };
+		968E901F1CF55940004B0BD4 /* html2 in Resources */ = {isa = PBXBuildFile; fileRef = 968E901E1CF55940004B0BD4 /* html2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		966D19121C3A2DDD00B0B63C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		966D19141C3A2DE300B0B63C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		966D191C1C3A6D3E00B0B63C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		968E901E1CF55940004B0BD4 /* html2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html2; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		9608713C1C32467F00A93494 /* HTML5 Game */ = {
 			isa = PBXGroup;
 			children = (
+				968E901E1CF55940004B0BD4 /* html2 */,
 				966A04B21C9A523000A11F57 /* Ad */,
 				960871AC1C3284D600A93494 /* html */,
 				9608713D1C32467F00A93494 /* AppDelegate.swift */,
@@ -399,6 +402,7 @@
 				966A04C11C9A525800A11F57 /* StoryboardAD.storyboard in Resources */,
 				960871451C32467F00A93494 /* Assets.xcassets in Resources */,
 				960871431C32467F00A93494 /* Main.storyboard in Resources */,
+				968E901F1CF55940004B0BD4 /* html2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
