@@ -13,7 +13,7 @@ class Data {
     //5120 game
     
     //URL setup online
-     let AdURL: String = "http://webappchannel.com/tonyapp/hexspin-v4.txt"
+     let AdURL: String = "http://webappchannel.com/tonyapp/spin-hexagon-v4.txt"
     
     //google
     let gBanner : String = ""
@@ -25,14 +25,14 @@ class Data {
     let cAppID: String = ""
     let cSign : String = ""
     //amazon
-    let AmazonKey: String = "6502017581134d118ed939d601e14fb8"
+    let AmazonKey: String = "47d77d694d5f463d95dae04ec0a71a27"
     
     //adcolony
-    let AdcolonyAppID: String = "appff483dc3fe0c42648a"
-    let AdcolonyZoneID: String = "vz1879f2a41e944be7b6"
+    let AdcolonyAppID: String = "appaf0992360b7648e881"
+    let AdcolonyZoneID: String = "vzb275ebeea7f74452aa"
     
     //revmob appID
-    let RevmobID: String = "5745b2ebfe3ebe4f6ad53874"
+    let RevmobID: String = "575536d02d9782957ba91316"
     
     //Vungle ID
     let VungleID: String = ""
