@@ -25,7 +25,6 @@
 		960871701C3247A100A93494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9608716F1C3247A100A93494 /* UIKit.framework */; };
 		960871721C3247A800A93494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960871711C3247A800A93494 /* CoreGraphics.framework */; };
 		960871741C3247AE00A93494 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960871731C3247AE00A93494 /* StoreKit.framework */; };
-		960871761C3247B300A93494 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960871751C3247B300A93494 /* AdSupport.framework */; };
 		960871821C32785200A93494 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960871811C32785200A93494 /* GoogleMobileAds.framework */; };
 		960871AD1C3284D600A93494 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 960871AC1C3284D600A93494 /* html */; };
 		966A04BC1C9A525800A11F57 /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A04B31C9A525800A11F57 /* AdManagerView.swift */; };
@@ -167,7 +166,6 @@
 				960871721C3247A800A93494 /* CoreGraphics.framework in Frameworks */,
 				966A04CE1C9A536900A11F57 /* libz.1.2.5.tbd in Frameworks */,
 				966A04CC1C9A536200A11F57 /* libsqlite3.tbd in Frameworks */,
-				960871761C3247B300A93494 /* AdSupport.framework in Frameworks */,
 				966D19151C3A2DE300B0B63C /* AudioToolbox.framework in Frameworks */,
 				966A04C71C9A52B700A11F57 /* AdColony.framework in Frameworks */,
 				966D19101C3A2DD500B0B63C /* CoreBluetooth.framework in Frameworks */,

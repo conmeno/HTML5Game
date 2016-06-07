@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMobileAds
 
-class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate,VungleSDKDelegate {
+class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate,VungleSDKDelegate, RevMobAdsDelegate {
     
     
     let viewController:UIViewController
@@ -33,7 +33,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var isFirstChart = false
     var isApplovinShowed = false
     var amazonLocationY:CGFloat = 20
-    var AdmobLocationY: CGFloat = 20
+    // var AdmobLocationY: CGFloat = 20
     var AdmobBannerTop = true
     var AmazonBannerTop = false
     var AdNumber = 1
@@ -60,10 +60,10 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     
     func ViewDidload()
     {
-        if(Utility.isCDMA())
-        {
-            showAdButton();
-        }
+        //        if(Utility.isCDMA())
+        //        {
+        //            showAdButton();
+        //        }
         
         if(CanShowAd())
         {
@@ -93,6 +93,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             {
                 
                 Utility.setupRevmob()
+                RevmobloadVideo()
             }
             
             if(Utility.isAd7)
@@ -103,12 +104,12 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             
             if(Utility.isAd8)
             {
-    
+                
                 Supersonic.sharedInstance().loadIS()
                 Supersonic.sharedInstance().showISWithViewController(viewController)
             }
             
-            if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 || Utility.isAd8 )
+            if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 || Utility.isAd8  || Utility.isAd6)
             {
                 self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
             }
@@ -120,18 +121,18 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 //set up amazon full
                 interstitialAmazon = AmazonAdInterstitial()
                 interstitialAmazon.delegate = self
-                 let h = viewController.view.bounds.height
+                let h = viewController.view.bounds.height
                 loadAmazonFull()
                 showAmazonFull()
-                amazonLocationY = h - 50
+                //amazonLocationY = h - 50
                 showAmazonBanner()
                 self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
-            
-            
+                
+                
             }
             
             
-         
+            
             
             
         }
@@ -159,10 +160,10 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     
     func dragAdButton(sender:UIButton!)
     {
-         Utility.OpenView("AdView1",view: viewController)
+        Utility.OpenView("AdView1",view: viewController)
         
     }
-
+    
     
     
     
@@ -343,7 +344,15 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 }
                 
             }
-            
+            if(Utility.isAd6)
+            {
+                if(!isRevmobVideoLoaded)
+                {
+                    RevmobloadVideo()
+                }
+                
+                
+            }
             
             
         }
@@ -352,28 +361,6 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         
     }
     
-    //
-    //    func timerVPNMethodAutoAd(timer:NSTimer) {
-    //        print("VPN Checking....")
-    //        let isAd = Utility.CanShowAd()
-    //        if(isAd && Utility.isStopAdmobAD)
-    //        {
-    //
-    //            ShowAdmobBanner()
-    //            Utility.isStopAdmobAD = false
-    //            print("Reopening Ad from admob......")
-    //        }
-    //
-    //
-    //
-    ////        if(isAd == false && Utility.isStopAD == false)
-    ////        {
-    ////            gBannerView.removeFromSuperview()
-    ////            Utility.isStopAD = true;
-    ////            print("Stop showing Ad from admob......")
-    ////        }
-    //
-    //    }
     
     func hideAdmobBanner()
     {
@@ -381,16 +368,48 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         
     }
     
+    ///////////////////////////////////
+    ////////REVMOB
+    var video: RevMobFullscreen?
+    var isRevmobVideoLoaded = false
+    //#MARK:- Video
+    func RevmobloadVideo(){
+        video = RevMobAds.session()?.fullscreen()
+        video?.delegate = self
+        video?.loadVideo()
+    }
+    func RevmobShowVideo(){
+        video?.showVideo()
+    }
     
-    //
-    //    func showChartBoost()
-    //    {
-    //        Chartboost.closeImpression()
-    //        Chartboost.showInterstitial("Home" + String(AdNumber))
-    //        AdNumber++
-    //        print(AdNumber)
-    //    }
-    //
+    
+    //delegate
+    //MARK: video
+    func revmobVideoDidLoad(placementId: String!) {
+        print("RevMob Video loaded")
+        isRevmobVideoLoaded = true;
+        RevmobShowVideo()
+    }
+    func revmobVideoDidFailWithError(error: NSError!, onPlacement placementId: String!) {
+        print("RevMob Video failed to load with error: \(error.localizedDescription)")
+    }
+    func revmobVideoDidStart(placementId: String!) {
+        print("RevMob Video did start")
+    }
+    func revmobVideoDidFinish(placementId: String!) {
+        print("RevMob Video did finish")
+    }
+    func revmobVideoNotCompletelyLoaded(placementId: String!) {
+        print("RevMob Video not loaded yet")
+    }
+    func revmobUserDidCloseVideo(placementId: String!) {
+        print("RevMob Video closed by user")
+    }
+    func revmobUserDidClickOnVideo(placementId: String!) {
+        print("RevMob Video clicked by user")
+    }
+    /////////////////////////////////
+    //////////////////////////////////
     
     
     

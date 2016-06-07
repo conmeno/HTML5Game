@@ -336,13 +336,13 @@ class Utility {
     {
         
         let completionBlock: () -> Void = {
-            RevMobAds.session().showFullscreen()
-        
             
-            self.RevmobFull()
-            self.RevmobVideo()
-            //RevmobPopup()
+            
             self.RevmobBanner()
+            self.RevmobFull()
+            //self.RevmobVideo()
+            //RevmobPopup()
+            
         }
         let errorBlock: (NSError!) -> Void = {error in
             // check the error
@@ -350,6 +350,7 @@ class Utility {
         }
         RevMobAds.startSessionWithAppID(Utility.RevmobID,
             withSuccessHandler: completionBlock, andFailHandler: errorBlock);
+
         
     }
     static func RevmobBanner()
@@ -376,6 +377,13 @@ class Utility {
         //To show
         RevMobAds.session()?.fullscreen().showVideo()
     }
+    
+    
+  
+
+    
+    
+    
     
 //    static func CanShowAd()->Bool
 //    {
